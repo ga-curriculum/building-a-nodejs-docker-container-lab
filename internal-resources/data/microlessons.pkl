@@ -16,10 +16,3 @@ exercise = new Template.Microlesson {
   videoUrl = ""
 }
 
-levelUp = new Template.Microlesson {
-  friendlyName = "Level Up"
-  dirName = "level-up"
-  type = "Level Up Content"
-  videoUrl = ""
-}
-

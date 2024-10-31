@@ -1,22 +1,14 @@
 <!-- ! Do not delete or rename this file! -->
 <h1>
   <span class="prefix"></span>
-  <span class="headline">[tktk Module Name]</span>
+  <span class="headline">Building a Node.js Docker Container Lab</span>
 </h1>
-
-tktk Add some default course navigation content here. This landing page will be used when a student's course cannot be determined, so don't include any course-specific details.
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module. Introduce the lab. What will the students build in this lab?
+In this lab, students will learn how to containerize a simple Node.js API using Docker. They will start by building a basic Express server, then test it locally before creating a `Dockerfile` to package the app. By the end, students will have a Docker image ready for deployment on any machine with Docker. This lab provides hands-on experience with containerization, an essential skill in modern software engineering.
 
 ## Content
 
-- [Setup](./setup/README.md)
-- [Exercise](./exercise/README.md)
-
-## Level Up
-
-tktk If there is no Level Up content for this lab, then this section and all of its content should be removed.
-
-🚀 [Level Up](./level-up/README.md)
+- [Setup](../setup/README.md)
+- [Exercise](../exercise/README.md)

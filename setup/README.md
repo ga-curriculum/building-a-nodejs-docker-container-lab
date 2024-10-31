@@ -1,58 +1,25 @@
 <h1>
-  <span class="headline">[tktk Module Name]</span>
+  <span class="headline">Building a Node.js Docker Container Lab</span>
   <span class="subhead">Setup</span>
 </h1>
 
 ## Setup
 
-tktk The below is a generic starting point for lab setup. You may need to make adjustments to this.
+In this lab, you will create a simple Node.js API using Express, test it locally, and then package it in a Docker container for easy deployment. By the end, you will have a Docker image of your application that can be deployed on any machine.
 
-Open your Terminal application and navigate to your <code class="filepath">~/code/ga/labs</code> directory:
+## Prerequisites
 
-```bash
-cd ~/code/ga/labs
-```
+You will need to install Node.js and npm on your AWS EC2 instance (or another environment) before starting this lab.
 
-### Fork and clone the starter code
-
-tktk Use the below instructions if students will need starter code from a separate module to complete the lab exercise. If they do not, delete this section and all of its contents.
-
-Fork the [[tktk Module Name] Starter Code](https://git.generalassemb.ly/modular-curriculum-all-courses/tktk-module-name-starter-code) repository.
-
-Clone a copy of your remote repo locally by using the `git clone` command:
+To check if Node.js is already installed, use the following command in the terminal:
 
 ```bash
-git clone https://git.generalassemb.ly/<your-username>/tktk-module-name-starter-code.git tktk-module-name
+node --version
 ```
 
-Replace `<your-username>` (including the `<` and `>`) with your General Assembly GitHub Enterprise username before you run this command.
+- If you see a version number, Node.js is already installed.
+- If you receive a "command not found" error, Node.js is not installed.
 
-### Create and clone a GitHub repo
+<br>
 
-tktk Use the below instructions if students do not need starter code from a separate module to complete the lab exercise. If they do, delete this section and all of its contents.
-
-Make a new repository on [GitHub](https://github.com/) named `tktk-module-name`.
-
-Clone a copy of your remote repo locally by using the `git clone` command:
-
-```bash
-git clone https://github.com/<your-username>/tktk-module-name.git
-```
-
-Replace `<your-username>` (including the `<` and `>`) with your GitHub username before you run this command.
-
-### Launch in VS Code
-
-Next, `cd` into the cloned directory, <code class="filepath">tktk-module-name</code>:
-
-```bash
-cd tktk-module-name
-```
-
-Open the contents of the directory in VS Code:
-
-```bash
-code .
-```
-
-tktk Are there more lab setup steps? Don't forget to add them here.
+If Node.js is not installed, follow [this guide from AWS](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html) for installation steps.
