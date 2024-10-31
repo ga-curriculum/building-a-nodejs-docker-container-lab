@@ -121,58 +121,100 @@ In this lab, you will create a simple Node.js API using Express, test it locally
    - You should see a message indicating the server is listening on port **3000**.
    - Open your browser and go to [`http://localhost:3000`](http://localhost:3000). You should see the message "Hello World!"
 
+Now, all this is fine and working, but what about Docker? Currently, the application is running on our local machine and relies on the host having Node.js installed. What if we didn’t have Node.js? Or what if we had a version of Node.js that is incompatible with our application?
+
+Let's dockerize the application to ensure that our app can run anywhere.
+
 ## Step 5: Dockerize the Application
 
-Now that we have a working application, let’s package it into a Docker container.
+First we will need a Dockerfile.
 
 1. **Create a `Dockerfile`**:
 
    - In the `hello-node` directory, create a file named `Dockerfile`.
 
-2. **Define the Dockerfile Instructions**:
+### Define the Dockerfile Instructions
 
-   - Add the following content to the `Dockerfile` to specify how to build and run the application in Docker:
+1. **Specify the Base Image**
 
-     ```yml
-     FROM node:16-alpine # Use a lightweight Node.js image
-     COPY . . # Copy project files into the container
-     RUN npm install # Install project dependencies
-     CMD ["node", "index.js"] # Start the application
-     ```
+   Now we need to tell Docker what to do with our application. First, we need to specify the base image. In this case, let's use `node:16-alpine`:
 
-3. **Clean Up Local Dependencies**:
+   ```yml
+   FROM node:16-alpine
+   ```
 
-   - Since Docker will install the dependencies inside the container, delete the `node_modules` folder on your machine to ensure the app only relies on Docker for dependencies:
+2. **Copy Source Code**
 
-     ```bash
-     rm -rf node_modules
-     ```
+   Now let's tell docker to copy our source code into the container:
 
-4. **Build the Docker Image**:
+   ```yml
+   COPY . .
+   ```
 
-   - In the terminal, build the Docker image. The `-t` flag lets you name the image (in this case, `hello-node`):
+3. **Install Node Modules**
 
-     ```bash
-     docker build -t hello-node .
-     ```
+   Next, let's add the script to install the Node.js modules inside the container:
 
-5. **Verify the Docker Image**:
+   ```yml
+   RUN npm install
+   ```
 
-   - Run `docker images` to confirm that the `hello-node` image was created.
+4. **Start the Application**
 
-     ```bash
-     docker images
-     ```
+   Now, let's add the script to start the application:
 
-6. **Run the Docker Container**:
+   ```yml
+   CMD ["node", "index.js"]
+   ```
 
-   - Start the container with the following command, mapping port 3000 on your machine to port 3000 in the container:
+   ### Review the Complete Dockerfile
 
-     ```bash
-     docker run -dp 3000:3000 hello-node
-     ```
+   Your final Dockerfile should look like this:
 
-   - Open your browser again and go to [`http://localhost:3000`](http://localhost:3000). You should see **"Hello World!"** served from the containerized application.
+   ```yml
+   FROM node:16-alpine
+   COPY . .
+   RUN npm install
+   CMD ["node", "index.js"]
+   ```
+
+### Clean Up Local Dependencies:
+
+- Since Docker will install the dependencies inside the container, delete the `node_modules` folder on your machine to ensure the app only relies on Docker for dependencies:
+
+  ```bash
+  rm -rf node_modules
+  ```
+
+### Build the Docker Image
+
+- In the terminal, build the Docker image. The `-t` flag lets you name the image (in this case, `hello-node`):
+
+  ```bash
+  docker build -t hello-node .
+  ```
+
+### Verify the Docker Image
+
+- Run `docker images` to confirm that the `hello-node` image was created.
+
+  ```bash
+  docker images
+  ```
+
+### Run the Docker Container
+
+- Start the container with the following command, mapping port 3000 on your machine to port 3000 in the container:
+
+  ```bash
+  docker run -dp 3000:3000 hello-node
+  ```
+
+- Open your browser again and go to [`http://localhost:3000`](http://localhost:3000).
+
+<br>
+
+You should see **"Hello World!"** served from the containerized application.
 
 ## Step 6 (Optional): Push the Docker Image to Docker Hub
 
