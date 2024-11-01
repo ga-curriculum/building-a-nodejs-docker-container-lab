@@ -26,6 +26,11 @@ Estimated time to complete core lab exercise: **30 min**
 
 🏁 [Solution code](https://git.generalassemb.ly/modular-curriculum-all-courses/building-a-nodejs-docker-container-lab-solution)
 
+### Github Pages Sites
+
+- [Default Landing Page](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/building-a-nodejs-docker-container-lab/canvas-landing-pages/fallback)
+- [MEA - Modern Engineering](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/building-a-nodejs-docker-container-lab/canvas-landing-pages/mea)
+
 ### Resources
 
 ✏️ [Instructor Guide](./internal-resources/instructor-guide.md)
