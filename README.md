@@ -28,8 +28,8 @@ Estimated time to complete core lab exercise: **30 min**
 
 ### Github Pages Sites
 
-- [Default Landing Page](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/building-a-nodejs-docker-container-lab/canvas-landing-pages/fallback)
-- [MEA - Modern Engineering](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/building-a-nodejs-docker-container-lab/canvas-landing-pages/mea)
+- [Default Landing Page](https://ga-curriculum.github.io/building-a-nodejs-docker-container-lab/canvas-landing-pages/fallback)
+- [MEA - Modern Engineering](https://ga-curriculum.github.io/building-a-nodejs-docker-container-lab/canvas-landing-pages/mea)
 
 ### Resources
 
@@ -41,4 +41,4 @@ Estimated time to complete core lab exercise: **30 min**
 
 ---
 
-**Find a 👾 bug 👾 or have suggestions? [Let us know](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/module-feedback.html)!**
+**Find a 👾 bug 👾 or have suggestions? [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback.html)!**
